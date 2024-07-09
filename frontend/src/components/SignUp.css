@@ -1,0 +1,47 @@
+.animatedButton {
+  background: none !important;
+  position: relative !important;
+  overflow: hidden !important;
+  color: #79e812;
+  transition: 0.5s !important;
+} 
+/* The signup text */
+.animatedButton:hover{
+  color: rgb(1, 11, 4) !important;
+  font-weight: 700 !important;
+
+}
+/* The signup box */
+.animatedButton::before {
+  content: "" !important;
+  position: absolute !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 180% !important;
+  background: rgb(25, 10, 156) !important;
+  z-index: -1 !important;
+  transition: 0.5s !important;
+  top: 0 !important;
+  border-radius: 0 0 50% 50% !important;
+}
+
+.animatedButton:hover::before {
+  height: 0% !important;
+}
+
+.animatedButton::after {
+  content: "" !important;
+  position: absolute !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 0% !important;
+  background: rgb(73, 211, 35) !important;
+  z-index: -1 !important;
+  transition: 0.5s !important;
+  top: 0 !important;
+  border-radius: 0 0 50% 50% !important;
+}
+
+.animatedButton:hover::after {
+  height: 180% !important;
+}
