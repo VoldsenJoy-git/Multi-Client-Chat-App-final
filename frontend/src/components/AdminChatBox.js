@@ -28,7 +28,7 @@ import {
   listAll,
   list,
 } from "firebase/storage";
-import { v4 } from "uuid";
+import { v4 } from "uuid"; // generate random string 
 
 const ENDPOINT = "http://localhost:3001"; // "https://talk-a-tive.herokuapp.com"; -> After deployment
 var socket, selectedChatCompare;
@@ -47,6 +47,7 @@ const AdminChatBox = ({ admin, fetchAgain, setFetchAgain }) => {
   // const [imageUrls, setImageUrls] = useState([]);
 
   const imagesListRef = ref(storage, "images/");
+
   const uploadFile = () => {
     if (imageUpload == null) return;
     const imageRef = ref(storage, `images/${imageUpload.name + v4()}`);
